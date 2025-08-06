@@ -1,102 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-<!-- ADD META TAG REQUIRED TO MAKE PAGE RESPONSIVE-->
-    <meta name="description" content="Vanguard- Leading the Future of Success. Premier strategic investment and business acceleration firm for high-growth enterprises.">
-    <meta name="keywords" content="business growth, strategic investment, mergers, corporate consulting, digital transformation">
-<!-- ADD META TAG FOR AUTHOR AND YOUR NAME-->
-    <title>Vanguard | Leading the Future of Success</title>
-<!-- ADD LINK TO YOUR CSS-->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Vanguard- Leading the Future of Success. Premier strategic investment and business acceleration firm for high-growth enterprises.">
+        <meta name="keywords" content="business growth, strategic investment, mergers, corporate consulting, digital transformation">
+        <meta name="author" content="Taylor McCrea">
+        <title>Vanguard | Leading the Future of Success</title>
+        
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-<body>
-<!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
-    Vanguard
-        Main Navigation
-            About
-            Services
-            Contact
+    <body>
+    <!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
+        <header>
+            <h1>Vanguard</h1>
+            <nav>
+                <img src="images/vanguard-logo.svg" alt="Vanguard Logo">
+                <h2>Main Navigation</h2>
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger"><span></span></label>
+                <ul>
+                    <li><a href="#">About</a></li> 
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Innovation & Investment</h2>
+            We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
+            Request a Consultation
 
-        Innovation & Investment
-        We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
-        Request a Consultation
+            <h2>Our Expertise. Your Edge.</h2>
+            We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'
 
-        Our Expertise. Your Edge.
-        We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'
+            <h2>What We Offer</h2>
+                <h3>Strategic Growth Consulting</h3>
+                Unlock new revenue streams and optimize market expansion strategies.
 
-        What We Offer
-            Strategic Growth Consulting
-            Unlock new revenue streams and optimize market expansion strategies.
+                <h3>High-Impact Investment Solutions</h3>
+                Maximize returns with data-driven portfolio management.
 
-            High-Impact Investment Solutions
-            Maximize returns with data-driven portfolio management.
+                <h3>Business Acceleration & Mergers</h3>
+                Identify opportunities for rapid growth and high-value acquisitions.
 
-            Business Acceleration & Mergers
-            Identify opportunities for rapid growth and high-value acquisitions.
+                <h3>Digital Transformation</h3>
+                Stay at the forefront of industry advancements with AI, blockchain, and automation.
 
-            Digital Transformation
-            Stay at the forefront of industry advancements with AI, blockchain, and automation.
+                <h3>Exclusive Executive Advisory Services</h3>
+                Personalized insights and leadership support for C-suite executives and high-net-worth investors.
 
-            Exclusive Executive Advisory Services
-            Personalized insights and leadership support for C-suite executives and high-net-worth investors.
+                <h3>Corporate Innovation</h3>
+                Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.
 
-            Corporate Innovation
-            Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.
-
-            Proven Results
+            <h2>Proven Results</h2>
             Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
 
-                Profits
-                Year
-                Revenue ($M)
-                Growth (%)
+                <h3>Profits</h3>
+                <table>
+                    <tr>
+                        <th>Year</th>
+                        <th>Revenue ($M)</th>
+                        <th>Growth (%)</th>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>$120M</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>$180M</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>$250M</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>$340M</td>
+                        <td>85%</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>$420M</td>
+                        <td>100%</td>
+                    </tr>
+                </table>
 
-                2020
-                $120M
-                30%
+                <h3>Growth</h3>
+                <div  id="bar-chart">
+                    <div class="bar" data-year="2020" style="--height: 30%;"></div>
+                    <div class="bar" data-year="2021" style="--height: 50%;"></div>
+                    <div class="bar" data-year="2022" style="--height: 70%;"></div>
+                    <div class="bar" data-year="2023" style="--height: 85%;"></div>
+                    <div class="bar" data-year="2024" style="--height: 100%;"></div>
+                </div>
+        </main>
+        <footer>
+            <h2>Contact Us</h2>
+            <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
+            <form>
+                <label for="full-name">Full Name</label>
+                <input type="text" name="full-name" id="full-name">
 
-                2021
-                $180M
-                50%
+                <label for="email-address">Email Address</label>
+                <input type="email" name="email-address" id="email-address">
 
-                2022
-                $250M
-                70%
+                <label for="company-name">Company Name</label>
+                <input type="text" name="company-name" id="company-name">
 
-                2023
-                $340M
-                85%
+                <label for="industry">Industry</label>
+                <input type="text" name="industry" id="industry">
 
-                2024
-                $420M
-                100%
+                <label for="how-help">How can we help you?</label>
+                <textarea name="how-help" id="how-help" rows="5" columns="50"></textarea>
 
-                Growth
-<!-- CODE PROVIDED FOR YOU, NOTHING TO DO FOR THE BAR CHART IN THE HTML-->
-                    <div  id="bar-chart">
-                        <div class="bar" data-year="2020" style="--height: 30%;"></div>
-                        <div class="bar" data-year="2021" style="--height: 50%;"></div>
-                        <div class="bar" data-year="2022" style="--height: 70%;"></div>
-                        <div class="bar" data-year="2023" style="--height: 85%;"></div>
-                        <div class="bar" data-year="2024" style="--height: 100%;"></div>
-                    </div>
-
-        Contact Us
-        Want to take your business to the next level? Get in touch with our elite team today.
-
-            Full Name
-
-            Email Address
-
-            Company Name
-
-            Industry
-
-            How can we help you?
-
-            Submit
-
-        2025 Vanguard. All rights reserved. 
-        Email: info@vanguard.com 
-        Phone: 480.123.4567
+                <input type="submit" value="Submit">
+            </form>
+            <p>2025 Vanguard. All rights reserved. </p>
+            <p>Email: info@vanguard.com</p>
+            <p>Phone: 480.123.4567</p>
+        </footer>
+    </body>
+</html>
