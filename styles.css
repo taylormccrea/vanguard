@@ -68,6 +68,14 @@ html {
     margin: auto;
     font-family: "Inter", sans-serif;
 }
+h2, #results h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1em;
+}
+p {
+    line-height: 1.35;
+}
 header {
     background-color: var(--black);
     color: var(--blue);
@@ -85,17 +93,6 @@ header {
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 }
-#expertise, #offers {
-    background-color: var(--white);
-}
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--blue);
-    color: var(--white);
-}
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  #innovation{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
@@ -108,11 +105,48 @@ header {
     z-index: 1;
     color: var(--white);
 }
+#expertise, #offers {
+    background-color: white;
+}
+#expertise p {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#offers {
+    padding-bottom: 2em;
+}
+#offers h2 {
+    padding-bottom: 0.5em;
+}
+/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 1em;
+}
+.container h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1em;
+}
 #results {
     background-color: var(--blue);
     color: var(--white);
+    padding-bottom: 1em;
 }
-
+#results p {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: auto;
+}
+table {
+    color: var(--white);
+}
 /* THIS ONE IS DONE FOR YOU */
 /* Thank you :3 */
 #bar-chart {
@@ -122,10 +156,11 @@ header {
     justify-content: space-around;
     gap: 1rem;
     height: 300px;
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     padding: 1rem;
     position: relative;
+    margin: auto;
 }
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
