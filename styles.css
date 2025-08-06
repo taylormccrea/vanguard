@@ -146,6 +146,16 @@ header {
 }
 table {
     color: var(--white);
+    background-color: var(--black);
+    width: 100%;
+}
+th, td {
+    padding: 1em;
+    text-align: center;
+    border: var(--charcoal) solid 1px;
+}
+tr:nth-child(3), tr:nth-child(5) {
+    background-color: var(--charcoal);
 }
 /* THIS ONE IS DONE FOR YOU */
 /* Thank you :3 */
