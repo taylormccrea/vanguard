@@ -64,7 +64,6 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 html {
-    width: 400px;
     margin: auto;
     font-family: "Inter", sans-serif;
 }
@@ -82,7 +81,7 @@ header {
     box-shadow: 0 0 25px var(--blue);
     position: absolute;
     z-index: 2;
-    width: 100%;
+    width: 100vw;
 }
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
  img {
@@ -92,6 +91,76 @@ header {
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
+nav ul {
+  width: 100%;
+  margin:0;
+  padding:0;
+  list-style:none;
+  overflow:hidden;
+  text-align:center;
+  max-height: 0;
+}
+nav h2 {
+  visibility:hidden;
+  height:1px;
+}
+nav li a {
+  display:block;
+  font-family:sans-serif;
+  font-size:1.5rem;
+  padding:1rem;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-decoration:none;
+  color: white;
+  transition: background-color .3s ease-in;
+}
+nav a:hover, nav input:hover {
+    background-color: black;
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+/* BUILDS THE MIDDLE LINE OF THE HAMBURGER */
+label span {
+    background-color: white;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+/* BUILDS THE TOP AND BOTTOM LINES OF THE HAMBURGER*/
+label span:before, label span:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: .75rem;
+}
+label span:after {
+    top: -.75rem;
+}
+input {
+  display:none;
+}
+/* ADDS HEIGHT THE NAV WHEN IT'S DROPPED DOWN */
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+
+#innovation input, footer input {
+    display: inline;
 }
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  #innovation{
