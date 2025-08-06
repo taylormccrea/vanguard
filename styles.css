@@ -195,7 +195,19 @@ footer {
     background-color: var(--black);
     color: var(--white);
 }
-
+footer p {
+    text-align: left;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#copyright-and-contact-info {
+    padding: 1.5em;
+}
+#copyright-and-contact-info p{
+    text-align: center;
+    padding: 0;
+}
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
