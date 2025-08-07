@@ -102,8 +102,8 @@ header {
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 }
 nav {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    justify-content: right;
 }
 nav ul {
   width: 100%;
