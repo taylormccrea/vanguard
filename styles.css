@@ -64,7 +64,6 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 html {
-    margin: auto;
     font-family: "Inter", sans-serif;
     margin: 0 auto;
 }
@@ -72,6 +71,7 @@ h1 {
     font-size: 3em;
     font-weight: bold;
     padding-left: 1.5em;
+    width: 100vw;
 }
 h1, img {
     margin-top: .3em;
@@ -80,6 +80,23 @@ h2, #results h3 {
     font-weight: bold;
     font-size: 1.5rem;
     padding: 1em;
+}
+h2, h3 {
+    opacity: 0;
+    transform: translateY(-25px);
+    animation: enter-text 2s ease-in-out 1 forwards;
+}
+@keyframes enter-text {
+    from { opacity: 0; transform: translateY(-25px); }
+    to {opacity: 1; transform: translateY(0px); }
+}
+input[type="button"], input[type="submit"] {
+    opacity: 0;
+    animation: fade-in 3s ease-in-out 1 forwards;
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to {opacity: 1; }
 }
 p {
     line-height: 1.35;
@@ -92,14 +109,22 @@ header {
     z-index: 2;
     width: 100vw;
 }
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- img {
+img {
     content: "";
     float:left;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    animation: float 3s linear infinite;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+@keyframes float {
+    0%   { top: 0px; }
+    50%  { top: 10px; }
+    100% { top: 0px; }
 }
 nav {
     display: grid;
@@ -117,6 +142,8 @@ nav ul {
 nav h2 {
   visibility:hidden;
   height:1px;
+  grid-row-start: 1;
+  grid-row-end: 1; 
 }
 nav li a {
   display:block;
@@ -138,6 +165,8 @@ nav label {
     display: inline-block;
     padding: 1.5rem;
     user-select: none;
+    grid-row-start: 1;
+    grid-row-end: 1; 
 }
 /* BUILDS THE MIDDLE LINE OF THE HAMBURGER */
 label span {
@@ -180,12 +209,23 @@ input:checked ~ ul {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
+    grid-template-rows: auto 15% auto;
     place-items: center;
     text-align: center;
     padding: 1rem;
     overflow: hidden;
     z-index: 1;
     color: var(--white);
+}
+#innovation h2 {
+    align-self: end;
+    padding-bottom: 0;
+}
+#innovation p {
+    width: 75%;
+}
+#innovation input[type="button"] {
+    align-self: start;
 }
 #request-consult {
     padding: 1em;
@@ -213,6 +253,11 @@ input:checked ~ ul {
     padding: 1em;
     margin: 1em auto;
     border-radius: 1em;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+    transform: translateY(-5px);
 }
 .container h3 {
     font-size: 1.2rem;
@@ -233,8 +278,6 @@ table {
     color: var(--white);
     background-color: var(--black);
     width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
 }
 th, td {
     padding: 1em;
@@ -327,9 +370,12 @@ input[type="submit"], #request-consult {
     background-color: var(--blue);
     border-radius: .5em;
     border: none;
+    transform: scale(1);
+    transition: transform 1s ease-in-out;
 }
 input[type="submit"]:hover, #request-consult:hover {
     background-color: var(--red);
+    transform: scale(1.05, 1.05);
 }
 
 #copyright-and-contact-info {
