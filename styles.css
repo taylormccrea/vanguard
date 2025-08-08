@@ -374,7 +374,7 @@ footer a {
 }
 
 /* Media Queries (Medium) */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
     header {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -420,13 +420,23 @@ footer a {
         flex-direction: row;
     }
     table, #bar-chart {
-        width: 40vw;
-        margin: 0;
-        padding: 1em;
+        width: 50%;
         justify-self: center;
 }
 } 
 /* Media Queries (Large) */
-/* @media screen and (min-width: 900px) {
-
-} */
+@media screen and (min-width: 1024px) {
+    #offers-container {
+        grid-template-columns: auto auto auto;
+    }
+    #offers h3 {
+        padding: 1em 0;
+    }
+    form {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    form div {
+        padding: 1em;
+    }
+}
